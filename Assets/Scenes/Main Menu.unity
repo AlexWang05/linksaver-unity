@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 142514050}
   - component: {fileID: 142514049}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Edit Button 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,7 +521,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 142514051}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864083493}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: LaunchAddCourseWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &142514050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +967,7 @@ GameObject:
   - component: {fileID: 281834042}
   - component: {fileID: 281834041}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Edit Button 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,7 +1036,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 281834043}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864083493}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: LaunchAddCourseWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &281834042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,8 +1136,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 60.732956}
-  m_SizeDelta: {x: -1052, y: -488}
+  m_AnchoredPosition: {x: 0, y: 61.784977}
+  m_SizeDelta: {x: 0, y: -123.570045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349399975
 MonoBehaviour:
@@ -2085,7 +2109,7 @@ GameObject:
   - component: {fileID: 819673497}
   - component: {fileID: 819673496}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Edit Button 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2154,7 +2178,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 819673498}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864083493}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: LaunchAddCourseWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &819673497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2237,6 +2273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8ecd27452067a44a65dc436186e58c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AddCoursePanel: {fileID: 2121757968}
 --- !u!4 &864083494
 Transform:
   m_ObjectHideFlags: 0
@@ -2676,7 +2713,7 @@ GameObject:
   - component: {fileID: 1194433335}
   - component: {fileID: 1194433338}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Edit Button 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2798,7 +2835,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1194433336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864083493}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: LaunchAddCourseWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1204680715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,7 +2937,7 @@ GameObject:
   - component: {fileID: 1212224108}
   - component: {fileID: 1212224107}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Edit Button 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2957,7 +3006,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1212224109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864083493}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: LaunchAddCourseWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1212224108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3415,7 +3476,7 @@ GameObject:
   - component: {fileID: 1528054870}
   - component: {fileID: 1528054869}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Edit Button 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3484,7 +3545,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1528054871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864083493}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: LaunchAddCourseWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1528054870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4203,7 +4276,7 @@ GameObject:
   - component: {fileID: 1880199070}
   - component: {fileID: 1880199069}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Edit Button 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4272,7 +4345,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1880199071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864083493}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: LaunchAddCourseWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1880199070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4340,7 +4425,7 @@ GameObject:
   - component: {fileID: 2001686770}
   - component: {fileID: 2001686769}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Edit Button 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4409,7 +4494,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2001686771}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864083493}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: LaunchAddCourseWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2001686770
 MonoBehaviour:
   m_ObjectHideFlags: 0
