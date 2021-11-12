@@ -12,7 +12,8 @@ public class AppManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (AddCoursePanel != null)
+        // starts by hiding add course panel to show main panel
+        if (AddCoursePanel)
         {
             AddCoursePanel.SetActive(false);
         }
@@ -37,12 +38,15 @@ public class AppManager : MonoBehaviour
     // onClick function for edit buttons
     public void LaunchAddCourseWindow()
     {
+        // gets button clicked
         buttonNumber = GetCurrentObjectName();
 
+        // launches add course panel
         if (AddCoursePanel != null)
         {
             AddCoursePanel.SetActive(true);
         }
+        
     }
 
 
