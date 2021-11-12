@@ -9,6 +9,7 @@ public class AppManager : MonoBehaviour
 {
     public GameObject AddCoursePanel;
     private int buttonNumber;
+    private int inputSelected;
     
     // assigned via editor
     public TMP_InputField nameInputField, courseLinkInputField, meetingLinkInputField;
@@ -39,8 +40,43 @@ public class AppManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // tab and shift-tab switching in add course panel
+        if (Input.GetKeyDown(KeyCode.Tab) && Input.GetKey(KeyCode.LeftShift))
+        {
+            inputSelected--;
+            if (inputSelected < 0) inputSelected = 2;
+            selectInputField();
+        }
+
         
+        if (Input.GetKeyDown(KeyCode.Tab) && AddCoursePanel.activeInHierarchy)
+        {
+            inputSelected++;
+            if (inputSelected > 2) inputSelected = 0;
+            selectInputField();
+        }
+
+        void selectInputField()
+        {
+            switch (inputSelected)
+            {
+                case 0:
+                    nameInputField.Select();
+                    break;
+                case 1:
+                    courseLinkInputField.Select();
+                    break;
+                case 2:
+                    meetingLinkInputField.Select();
+                    break;
+            }
+        }
     }
+
+    public void nameInputSelected() => inputSelected = 0;
+    public void courseLinkInputSelected() => inputSelected = 1;
+    public void meetingLinkInputSelected() => inputSelected = 2;
+
 
     // updates the displayed course names to ones saved in player preferences
     void updateCourseNames()
