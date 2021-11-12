@@ -13,6 +13,7 @@ public class AppManager : MonoBehaviour
     // assigned via editor
     public TMP_InputField nameInputField, courseLinkInputField, meetingLinkInputField;
     public TMP_Text[] courseName = new TMP_Text[8];
+    public TMP_Text[] courseInputText = new TMP_Text[3];
 
     // Start is called before the first frame update
     void Start()
@@ -72,7 +73,11 @@ public class AppManager : MonoBehaviour
         {
             AddCoursePanel.SetActive(true);
         }
-        
+
+        // set textbox content to saved content
+        nameInputField.text = PlayerPrefs.GetString("courseName" + buttonNumber);
+        courseLinkInputField.text = PlayerPrefs.GetString("courseLink" + buttonNumber);
+        meetingLinkInputField.text = PlayerPrefs.GetString("meetingLink" + buttonNumber);
     }
 
     // called when user saves and exits from Add Course Window
@@ -99,6 +104,21 @@ public class AppManager : MonoBehaviour
         updateCourseNames();
     }
 
+    // opens all links associated with course
+    public void LaunchCourse()
+    {
+        int courseNum = GetCurrentObjectName();
 
+        string courseLink = PlayerPrefs.GetString("courseLink" + courseNum);
+        string meetingLink = PlayerPrefs.GetString("meetingLink" + courseNum);
+
+        if (!courseLink.StartsWith("http"))
+            courseLink = "https://" + courseLink;
+        if (!meetingLink.StartsWith("http"))
+            meetingLink = "https://" + meetingLink;
+
+        Application.OpenURL(courseLink);
+        Application.OpenURL(meetingLink);
+    }
 
 }
