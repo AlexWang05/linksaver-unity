@@ -3,11 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class AppManager : MonoBehaviour
 {
     public GameObject AddCoursePanel;
     private int buttonNumber;
+    
+    // assigned via editor
+    public TMP_InputField nameInputField, courseLinkInputField, meetingLinkInputField;
+    public TMP_Text[] courseName = new TMP_Text[8];
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +22,33 @@ public class AppManager : MonoBehaviour
         {
             AddCoursePanel.SetActive(false);
         }
+        
+        // initialize player preferences and course name text GameObjects
+        for (int i = 1; i <= 8; i++)
+        {
+            PlayerPrefs.SetString("courseName" + i, "");
+            PlayerPrefs.SetString("courseLink" + i, "");
+            PlayerPrefs.SetString("meetingLink" + i, "");
+        }
+
+        updateCourseNames();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    // updates the displayed course names to ones saved in player preferences
+    void updateCourseNames()
+    {
+        for (int i = 1; i <= 8; i++)
+        {
+            // set course name
+            courseName[i - 1].SetText(PlayerPrefs.GetString("courseName" + i));
+        }
     }
 
     // gets the name of the button that was clicked
@@ -48,6 +74,31 @@ public class AppManager : MonoBehaviour
         }
         
     }
+
+    // called when user saves and exits from Add Course Window
+    public void CloseAddCourseWindow()
+    {
+        // gets information from all input fields
+        string courseName = nameInputField.text;
+        string courseLink = courseLinkInputField.text;
+        string meetingLink = meetingLinkInputField.text;
+
+        // saves in player preferences
+        PlayerPrefs.SetString("courseName" + buttonNumber, courseName);
+        PlayerPrefs.SetString("courseLink" + buttonNumber, courseLink);
+        PlayerPrefs.SetString("meetingLink" + buttonNumber, meetingLink);
+
+        // setActive to false for window
+        AddCoursePanel.SetActive(false);
+
+        // clear all fields since all courses use the same field
+        nameInputField.text = "";
+        courseLinkInputField.text = "";
+        meetingLinkInputField.text = "";
+
+        updateCourseNames();
+    }
+
 
 
 }
