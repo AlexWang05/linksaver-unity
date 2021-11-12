@@ -24,14 +24,7 @@ public class AppManager : MonoBehaviour
         {
             AddCoursePanel.SetActive(false);
         }
-        
-        // initialize player preferences and course name text GameObjects
-        for (int i = 1; i <= 8; i++)
-        {
-            PlayerPrefs.SetString("courseName" + i, "");
-            PlayerPrefs.SetString("courseLink" + i, "");
-            PlayerPrefs.SetString("meetingLink" + i, "");
-        }
+       
 
         updateCourseNames();
         
