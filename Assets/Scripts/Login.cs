@@ -31,7 +31,7 @@ public class Login : MonoBehaviour
 
         Debug.Log(storedEmail+ " " + storedPassword);
 
-        // set text 
+        // set placeholder text to what was previously stored
         placeholderEmail.SetText(storedEmail);
         placeholderPassword.SetText(storedPassword);
 

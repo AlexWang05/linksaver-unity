@@ -2885,6 +2885,9 @@ MonoBehaviour:
   passwordField: {fileID: 578756646}
   emailText: {fileID: 1503704302}
   passwordText: {fileID: 1316099730}
+  placeholderEmail: {fileID: 1654465031}
+  placeholderPassword: {fileID: 990964505}
+  formURL: 
 --- !u!4 &864083494
 Transform:
   m_ObjectHideFlags: 0
