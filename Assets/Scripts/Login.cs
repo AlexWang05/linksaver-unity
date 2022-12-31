@@ -15,6 +15,8 @@ public class Login : MonoBehaviour
     public TMP_Text emailText;
     public TMP_Text passwordText;
 
+    public TMP_Text placeholderEmail, placeholderPassword;
+
     private int inputSelected;
 
     [SerializeField] string formURL;
@@ -23,6 +25,16 @@ public class Login : MonoBehaviour
     void Start()
     {
         formURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLsejFcaimOPAr1p9FAUvXQFxt2tdi-JLl-cpBGOJYrQ7-Iw/formResponse";
+
+        string storedEmail = PlayerPrefs.GetString("email");
+        string storedPassword = PlayerPrefs.GetString("password");
+
+        Debug.Log(storedEmail+ " " + storedPassword);
+
+        // set text 
+        placeholderEmail.SetText(storedEmail);
+        placeholderPassword.SetText(storedPassword);
+
     }
 
     // Update is called once per frame
@@ -83,7 +95,12 @@ public class Login : MonoBehaviour
         string email = emailField.text;
         string password = passwordField.text;
 
+        // post to database
         StartCoroutine(Post(email, password));
+
+        // save local preferences
+        PlayerPrefs.SetString("email", email);
+        PlayerPrefs.SetString("password", password);
 
         // launch main screen
         SceneManager.LoadScene("Main Menu");
